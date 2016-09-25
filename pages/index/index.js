@@ -74,7 +74,8 @@ Page({
             info: '你好'
         }],
         userInfo: {},
-        scrollerHeight: 0
+        scrollerHeight: 0,
+        loadingHidden: true
     },
     //事件处理函数
     onLoad() {
@@ -87,5 +88,17 @@ Page({
           });
           this.update();
         });
+    },
+    //scroller事件
+    refresh() {
+      this.setData({
+        loadingHidden: false
+      });
+      setTimeout(() => {
+        this.setData({
+          loadingHidden: true
+        });
+        this.update();
+      }, 2000);
     }
 });

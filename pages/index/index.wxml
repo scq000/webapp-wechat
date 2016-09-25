@@ -1,8 +1,13 @@
 <!--index.wxml-->
 <view class="message">
 
+    <loading hidden="{{loadingHidden}}">
+        加载中...
+    </loading>
 
-    <scroll-view scroll-y="true" style="height: {{scrollerHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <scroll-view scroll-y="true" style="height: {{scrollerHeight}}px;"
+    upper-threshold="0"
+    lower-threshold="0" bindscrolltoupper="refresh" bindscrolltolower="loadMore" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
         <view class="message__item cell" wx:for="{{messages}}" wx:for-item="message">
             <view class="cell__head">
                 <image class="message__avator" src="{{message.avator.src}}"></image>
