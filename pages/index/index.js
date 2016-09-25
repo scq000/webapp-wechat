@@ -8,7 +8,8 @@ Page({
               src: '../../images/message-avator.png'
             },
             name: '张三',
-            info: '你好'
+            info: '你好',
+            unread: true
         },
         {
             avator: {

@@ -11,6 +11,20 @@
     width: 42px;
     height: 42px;
     margin-right: 15px;
+    position: relative;
+}
+
+.message__item--unread {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    z-index: 1;
 }
 
 .message__sender {
