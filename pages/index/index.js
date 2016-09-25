@@ -4,67 +4,72 @@ var app = getApp()
 Page({
     data: {
         messages: [{
-            avator: '1',
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
-        }, {
-            avator: '2',
+        },
+        {
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
-        }, {
-            avator: '3',
+        },
+        {
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
-        }, {
-            avator: '1',
+        },
+        {
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
-        },{
-            avator: '1',
+        },
+        {
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
-        }, {
-            avator: '2',
+        },
+        {
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
-        }, {
-            avator: '3',
+        },
+        {
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
-        }, {
-            avator: '1',
+        },
+        {
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
-        },{
-            avator: '1',
+        },
+        {
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
-        }, {
-            avator: '2',
-            name: '张三',
-            info: '你好'
-        }, {
-            avator: '3',
-            name: '张三',
-            info: '你好'
-        }, {
-            avator: '1',
-            name: '张三',
-            info: '你好'
-        },{
-            avator: '1',
-            name: '张三',
-            info: '你好'
-        }, {
-            avator: '2',
-            name: '张三',
-            info: '你好'
-        }, {
-            avator: '3',
-            name: '张三',
-            info: '你好'
-        }, {
-            avator: '1',
+        },
+        {
+            avator: {
+              src: '../../images/message-avator.png'
+            },
             name: '张三',
             info: '你好'
         }],
@@ -78,7 +83,7 @@ Page({
 
         app.getWindowHeight((height) => {
           this.setData({
-            scrollerHeight: height
+            scrollerHeight: height - 50
           });
           this.update();
         });

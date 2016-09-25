@@ -3,10 +3,14 @@
 
 
     <scroll-view scroll-y="true" style="height: {{scrollerHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-        <view class="message__item" wx:for="{{messages}}" wx:for-item="message">
-            <view class="message__avator">{{message.avator}}</view>
-            <view class="message__name">{{message.name}}</view>
-            <view class="message__info">{{message.info}}</view>
+        <view class="message__item cell" wx:for="{{messages}}" wx:for-item="message">
+            <view class="cell__head">
+                <image class="message__avator" src="{{message.avator.src}}"></image>
+            </view>
+            <view class="cell__body">
+                <text class="message__sender">{{message.name}}</text>
+                <text class="message__content">{{message.info}}</text>
+            </view>
         </view>
     </scroll-view>
 
