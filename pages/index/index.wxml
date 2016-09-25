@@ -1,9 +1,14 @@
 <!--index.wxml-->
-<view class="container">
+<view class="message">
 
-    <view class="tab">
-        <view class="tabbar">
-          hello world
+
+    <scroll-view scroll-y="true" style="height: {{scrollerHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view class="message__item" wx:for="{{messages}}" wx:for-item="message">
+            <view class="message__avator">{{message.avator}}</view>
+            <view class="message__name">{{message.name}}</view>
+            <view class="message__info">{{message.info}}</view>
         </view>
-    </view>
+    </scroll-view>
+
+
 </view>

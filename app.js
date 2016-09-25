@@ -24,7 +24,14 @@ App({
       });
     }
   },
+  getWindowHeight(callback) {
+    wx.getSystemInfo({
+      success(res) {
+        callback(res.windowHeight);
+      }
+    });
+  },
   globalData:{
-    userInfo:null
+    userInfo: null,
   }
 })

@@ -2,26 +2,85 @@
 //获取应用实例
 var app = getApp()
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {}
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    console.log('onLoad')
-    var that = this
-  	//调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-      that.update()
-    })
-  }
-})
+    data: {
+        messages: [{
+            avator: '1',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '2',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '3',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '1',
+            name: '张三',
+            info: '你好'
+        },{
+            avator: '1',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '2',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '3',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '1',
+            name: '张三',
+            info: '你好'
+        },{
+            avator: '1',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '2',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '3',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '1',
+            name: '张三',
+            info: '你好'
+        },{
+            avator: '1',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '2',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '3',
+            name: '张三',
+            info: '你好'
+        }, {
+            avator: '1',
+            name: '张三',
+            info: '你好'
+        }],
+        userInfo: {},
+        scrollerHeight: 0
+    },
+    //事件处理函数
+    onLoad() {
+        console.log('onLoad');
+        console.log('good');
+
+        app.getWindowHeight((height) => {
+          this.setData({
+            scrollerHeight: height
+          });
+          this.update();
+        });
+    }
+});
