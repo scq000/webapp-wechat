@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="tab">
+    <view class="tab__panel">
+        <navigator url="navigate?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator>
+    </view>
+  </view>
+</view>
